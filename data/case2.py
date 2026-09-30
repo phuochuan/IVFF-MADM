@@ -1,1 +1,18 @@
-"""Deferred: Case 1 must pass before implementing Case 2."""
+"""Case 2 / Table 2, PDF pp. 11-12 (journal pp. 5369-5370)."""
+
+from src.ivffn import IVFFN
+from src.madm import CriterionType
+
+CRITERION_WEIGHTS = [IVFFN(.15,.30,.15,.45), IVFFN(.10,.20,.35,.45), IVFFN(.25,.30,.15,.20)]
+CRITERION_TYPES = [CriterionType.BENEFIT] * 3
+DECISION_MATRIX = [
+    [IVFFN(.01,.04,.19,.75), IVFFN(.16,.25,.19,.51), IVFFN(.09,.16,.51,.75)],
+    [IVFFN(.09,.09,.51,.84), IVFFN(.16,.36,.36,.51), IVFFN(.01,.09,.36,.51)],
+    [IVFFN(.01,.04,.36,.64), IVFFN(.04,.25,.19,.19), IVFFN(.00,.04,.19,.36)],
+]
+THETA = .5
+PAPER_CRISP_WEIGHTS = [.2354,.1506,.2958]
+PAPER_NORMALIZED_WEIGHTS = [.3453,.2209,.4339]
+PAPER_SCORE_MATRIX = [[.0217,.2089,.1120],[.0770,.2758,.0482],[.0230,.1525,.0197]]
+PAPER_FINAL_SCORES = [.0511,.0542,.0251]
+PAPER_RANKING = [1,0,2]

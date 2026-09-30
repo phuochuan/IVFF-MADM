@@ -1,0 +1,475 @@
+
+=== Example 3 / full ===
+crisp[1]: paper=0.2928 code=0.292785634042 abs_error=1.43659580373e-05 PASS
+crisp[2]: paper=0.2332 code=0.233178607431 abs_error=2.13925685136e-05 PASS
+normalized[1]: paper=0.5567 code=0.55666452385 abs_error=3.54761499645e-05 PASS
+normalized[2]: paper=0.4433 code=0.44333547615 abs_error=3.54761499644e-05 PASS
+eta[1]: paper=0.0398 code=0.039753040871 abs_error=4.69591289621e-05 PASS
+eta[2]: paper=0.0301 code=0.0296304919728 abs_error=0.000469508027212 FAIL
+sigma[1,1]: paper=0.1258 code=0.125755265283 abs_error=4.47347165426e-05 PASS
+sigma[1,2]: paper=0.02 code=0.0200319933333 abs_error=3.19933333311e-05 PASS
+WSM[1]: paper=0.07889885999999999 code=0.0788843881733 abs_error=1.4471826684e-05 PASS
+WPM[1]: paper=0.0006209113367599999 code=0.00062169356876 abs_error=7.82231999924e-07 PASS
+sigma[2,1]: paper=0.0981 code=0.0980575651138 abs_error=4.2434886208e-05 PASS
+sigma[2,2]: paper=0.01 code=0.0100009966667 abs_error=9.96666665557e-07 PASS
+WSM[2]: paper=0.059045270000000004 code=0.0590189644132 abs_error=2.63055868468e-05 PASS
+WPM[2]: paper=0.00024209619291000003 code=0.000242019532423 abs_error=7.66604871878e-08 PASS
+ranking: paper=p1 > p2 code=p1 > p2 abs_error=- PASS
+
+=== Example 3 / rounded diagnostic ===
+crisp[1]: paper=0.2928 code=0.2928 abs_error=0 PASS
+crisp[2]: paper=0.2332 code=0.2332 abs_error=0 PASS
+normalized[1]: paper=0.5567 code=0.5567 abs_error=0 PASS
+normalized[2]: paper=0.4433 code=0.4433 abs_error=0 PASS
+eta[1]: paper=0.0398 code=0.0397598856684 abs_error=4.011433162e-05 PASS
+eta[2]: paper=0.0301 code=0.0296436830965 abs_error=0.000456316903545 FAIL
+sigma[1,1]: paper=0.1258 code=0.1258 abs_error=0 PASS
+sigma[1,2]: paper=0.02 code=0.02 abs_error=0 PASS
+WSM[1]: paper=0.07889885999999999 code=0.07889886 abs_error=0 PASS
+WPM[1]: paper=0.0006209113367599999 code=0.00062091133676 abs_error=0 PASS
+sigma[2,1]: paper=0.0981 code=0.0981 abs_error=0 PASS
+sigma[2,2]: paper=0.01 code=0.01 abs_error=0 PASS
+WSM[2]: paper=0.059045270000000004 code=0.05904527 abs_error=0 PASS
+WPM[2]: paper=0.00024209619291000003 code=0.00024209619291 abs_error=0 PASS
+ranking: paper=p1 > p2 code=p1 > p2 abs_error=- PASS
+
+=== Example 4 / full ===
+crisp[1]: paper=0.3752 code=0.375226281223 abs_error=2.62812229321e-05 PASS
+crisp[2]: paper=0.2068 code=0.206751537616 abs_error=4.8462384047e-05 PASS
+normalized[1]: paper=0.6447 code=0.644743268689 abs_error=4.32686894375e-05 PASS
+normalized[2]: paper=0.3553 code=0.355256731311 abs_error=4.32686894374e-05 PASS
+eta[1]: paper=0.1581 code=0.165139414754 abs_error=0.0070394147542 FAIL
+eta[2]: paper=0.1781 code=0.178125686966 abs_error=2.56869664347e-05 PASS
+sigma[1,1]: paper=0.3114 code=0.331371548905 abs_error=0.0199715489051 FAIL
+sigma[1,2]: paper=0.2705 code=0.270502867648 abs_error=2.86764820723e-06 PASS
+WSM[1]: paper=0.29686823 code=0.309747540163 abs_error=0.0128793101626 FAIL
+WPM[1]: paper=0.019294732208367003 code=0.0205312893458 abs_error=0.00123655713743 FAIL
+sigma[2,1]: paper=0.4039 code=0.403861879938 abs_error=3.81200623839e-05 PASS
+sigma[2,2]: paper=0.2141 code=0.214096661609 abs_error=3.33839099823e-06 PASS
+WSM[2]: paper=0.33646406 code=0.336446508758 abs_error=1.75512422426e-05 PASS
+WPM[2]: paper=0.019808126376630902 code=0.0198048651751 abs_error=3.26120151898e-06 PASS
+ranking: paper=p2 > p1 code=p2 > p1 abs_error=- PASS
+
+=== Example 4 / rounded diagnostic ===
+crisp[1]: paper=0.3752 code=0.3752 abs_error=0 PASS
+crisp[2]: paper=0.2068 code=0.2068 abs_error=0 PASS
+normalized[1]: paper=0.6447 code=0.6447 abs_error=0 PASS
+normalized[2]: paper=0.3553 code=0.3553 abs_error=0 PASS
+eta[1]: paper=0.1581 code=0.165148093571 abs_error=0.00704809357073 FAIL
+eta[2]: paper=0.1781 code=0.178136093188 abs_error=3.60931883155e-05 PASS
+sigma[1,1]: paper=0.3114 code=0.3314 abs_error=0.02 FAIL
+sigma[1,2]: paper=0.2705 code=0.2705 abs_error=0 PASS
+WSM[1]: paper=0.29686823 code=0.30976223 abs_error=0.012894 FAIL
+WPM[1]: paper=0.019294732208367003 code=0.0205339571415 abs_error=0.0012392249331 FAIL
+sigma[2,1]: paper=0.4039 code=0.4039 abs_error=0 PASS
+sigma[2,2]: paper=0.2141 code=0.2141 abs_error=0 PASS
+WSM[2]: paper=0.33646406 code=0.33646406 abs_error=0 PASS
+WPM[2]: paper=0.019808126376630902 code=0.0198081263766 abs_error=0 PASS
+ranking: paper=p2 > p1 code=p2 > p1 abs_error=- PASS
+
+=== Case 1 / full ===
+crisp[1]: paper=0.2958 code=0.295770645067 abs_error=2.93549332656e-05 PASS
+crisp[2]: paper=0.3952 code=0.395224729723 abs_error=2.47297233881e-05 PASS
+crisp[3]: paper=0.5008 code=0.500849706034 abs_error=4.97060337178e-05 PASS
+crisp[4]: paper=0.0746 code=0.0746103977096 abs_error=1.03977096097e-05 PASS
+normalized[1]: paper=0.2336 code=0.233542078723 abs_error=5.79212770783e-05 PASS
+normalized[2]: paper=0.3121 code=0.312071554368 abs_error=2.84456323276e-05 PASS
+normalized[3]: paper=0.3955 code=0.395473598972 abs_error=2.64010277727e-05 PASS
+normalized[4]: paper=0.0589 code=0.0589127679372 abs_error=1.27679371787e-05 PASS
+eta[1]: paper=0.4165 code=0.416451812612 abs_error=4.8187387733e-05 PASS
+eta[2]: paper=0.3552 code=0.35511581975 abs_error=8.41802499029e-05 PASS
+eta[3]: paper=0.3567 code=0.356710550199 abs_error=1.05501989065e-05 PASS
+eta[4]: paper=0.3716 code=0.371559560717 abs_error=4.04392829506e-05 PASS
+eta[5]: paper=0.3486 code=0.347805540154 abs_error=0.000794459846398 FAIL
+sigma[1,1]: paper=0.9308 code=0.930789131476 abs_error=1.08685240058e-05 PASS
+sigma[1,2]: paper=0.6597 code=0.65967080193 abs_error=2.91980699805e-05 PASS
+sigma[1,3]: paper=0.9308 code=0.930789131476 abs_error=1.08685240058e-05 PASS
+sigma[1,4]: paper=0.694 code=0.693986950247 abs_error=1.30497533826e-05 PASS
+WSM[1]: paper=0.83233525 code=0.832230141007 abs_error=0.000105108992769 FAIL
+WPM[1]: paper=0.0006736698228425606 code=0.000673484217303 abs_error=1.85605539693e-07 PASS
+sigma[2,1]: paper=0.8428 code=0.842794858069 abs_error=5.14193067525e-06 PASS
+sigma[2,2]: paper=0.6341 code=0.634082481761 abs_error=1.75182393048e-05 PASS
+sigma[2,3]: paper=0.6701 code=0.670055046423 abs_error=4.49535774737e-05 PASS
+sigma[2,4]: paper=0.849 code=0.8490375218 abs_error=3.75217998538e-05 PASS
+WSM[2]: paper=0.70981134 code=0.709715399981 abs_error=9.59400191574e-05 PASS
+WPM[2]: paper=0.0005163664036737122 code=0.000516239519352 abs_error=1.26884322202e-07 PASS
+sigma[3,1]: paper=0.8305 code=0.830549718095 abs_error=4.97180952478e-05 PASS
+sigma[3,2]: paper=0.769 code=0.76901511818 abs_error=1.51181798441e-05 PASS
+sigma[3,3]: paper=0.5659 code=0.565857459313 abs_error=4.25406872426e-05 PASS
+sigma[3,4]: paper=0.9354 code=0.935438781085 abs_error=3.87810849044e-05 PASS
+WSM[3]: paper=0.71291821 code=0.712847024679 abs_error=7.1185321487e-05 PASS
+WPM[3]: paper=0.0005741580071404184 code=0.0005740757193 abs_error=8.22878404153e-08 PASS
+sigma[4,1]: paper=0.9308 code=0.930789131476 abs_error=1.08685240058e-05 PASS
+sigma[4,2]: paper=0.769 code=0.768996265269 abs_error=3.73473131454e-06 PASS
+sigma[4,3]: paper=0.5923 code=0.592309932496 abs_error=9.93249590864e-06 PASS
+sigma[4,4]: paper=0.8639 code=0.863887128483 abs_error=1.28715170601e-05 PASS
+WSM[4]: paper=0.74257814 code=0.742497211058 abs_error=8.09289416748e-05 PASS
+WPM[4]: paper=0.0006220371326707027 code=0.000621910375774 abs_error=1.26756897123e-07 PASS
+sigma[5,1]: paper=0.9082 code=0.908236494969 abs_error=3.64949685144e-05 PASS
+sigma[5,2]: paper=0.6166 code=0.61657635546 abs_error=2.36445395259e-05 PASS
+sigma[5,3]: paper=0.6269 code=0.626852786901 abs_error=4.72130986368e-05 PASS
+sigma[5,4]: paper=0.7523 code=0.725606029971 abs_error=0.0266939700294 FAIL
+WSM[5]: paper=0.6968458000000001 code=0.695178567961 abs_error=0.001667232039 FAIL
+WPM[5]: paper=0.00044854161181662433 code=0.000432512346207 abs_error=1.60292656099e-05 PASS
+ranking: paper=p1 > p4 > p3 > p2 > p5 code=p1 > p4 > p3 > p2 > p5 abs_error=- PASS
+
+=== Case 1 / rounded diagnostic ===
+crisp[1]: paper=0.2958 code=0.2958 abs_error=0 PASS
+crisp[2]: paper=0.3952 code=0.3952 abs_error=0 PASS
+crisp[3]: paper=0.5008 code=0.5008 abs_error=0 PASS
+crisp[4]: paper=0.0746 code=0.0746 abs_error=0 PASS
+normalized[1]: paper=0.2336 code=0.2336 abs_error=0 PASS
+normalized[2]: paper=0.3121 code=0.3121 abs_error=0 PASS
+normalized[3]: paper=0.3955 code=0.3955 abs_error=0 PASS
+normalized[4]: paper=0.0589 code=0.0589 abs_error=0 PASS
+eta[1]: paper=0.4165 code=0.416504459911 abs_error=4.45991142128e-06 PASS
+eta[2]: paper=0.3552 code=0.355163853202 abs_error=3.61467981632e-05 PASS
+eta[3]: paper=0.3567 code=0.356746184004 abs_error=4.61840035702e-05 PASS
+eta[4]: paper=0.3716 code=0.371600088566 abs_error=8.85663353767e-08 PASS
+eta[5]: paper=0.3486 code=0.347852896175 abs_error=0.000747103825247 FAIL
+sigma[1,1]: paper=0.9308 code=0.9308 abs_error=0 PASS
+sigma[1,2]: paper=0.6597 code=0.6597 abs_error=0 PASS
+sigma[1,3]: paper=0.9308 code=0.9308 abs_error=0 PASS
+sigma[1,4]: paper=0.694 code=0.694 abs_error=0 PASS
+WSM[1]: paper=0.83233525 code=0.83233525 abs_error=0 PASS
+WPM[1]: paper=0.0006736698228425606 code=0.000673669822843 abs_error=0 PASS
+sigma[2,1]: paper=0.8428 code=0.8428 abs_error=0 PASS
+sigma[2,2]: paper=0.6341 code=0.6341 abs_error=0 PASS
+sigma[2,3]: paper=0.6701 code=0.6701 abs_error=0 PASS
+sigma[2,4]: paper=0.849 code=0.849 abs_error=0 PASS
+WSM[2]: paper=0.70981134 code=0.70981134 abs_error=0 PASS
+WPM[2]: paper=0.0005163664036737122 code=0.000516366403674 abs_error=0 PASS
+sigma[3,1]: paper=0.8305 code=0.8305 abs_error=0 PASS
+sigma[3,2]: paper=0.769 code=0.769 abs_error=0 PASS
+sigma[3,3]: paper=0.5659 code=0.5659 abs_error=0 PASS
+sigma[3,4]: paper=0.9354 code=0.9354 abs_error=0 PASS
+WSM[3]: paper=0.71291821 code=0.71291821 abs_error=0 PASS
+WPM[3]: paper=0.0005741580071404184 code=0.00057415800714 abs_error=0 PASS
+sigma[4,1]: paper=0.9308 code=0.9308 abs_error=0 PASS
+sigma[4,2]: paper=0.769 code=0.769 abs_error=0 PASS
+sigma[4,3]: paper=0.5923 code=0.5923 abs_error=0 PASS
+sigma[4,4]: paper=0.8639 code=0.8639 abs_error=0 PASS
+WSM[4]: paper=0.74257814 code=0.74257814 abs_error=0 PASS
+WPM[4]: paper=0.0006220371326707027 code=0.000622037132671 abs_error=0 PASS
+sigma[5,1]: paper=0.9082 code=0.9082 abs_error=0 PASS
+sigma[5,2]: paper=0.6166 code=0.6166 abs_error=0 PASS
+sigma[5,3]: paper=0.6269 code=0.6269 abs_error=0 PASS
+sigma[5,4]: paper=0.7523 code=0.7256 abs_error=0.0267 FAIL
+WSM[5]: paper=0.6968458000000001 code=0.69527317 abs_error=0.00157263 FAIL
+WPM[5]: paper=0.00044854161181662433 code=0.000432622349507 abs_error=1.59192623096e-05 PASS
+ranking: paper=p1 > p4 > p3 > p2 > p5 code=p1 > p4 > p3 > p2 > p5 abs_error=- PASS
+
+=== Case 2 / full ===
+crisp[1]: paper=0.2354 code=0.235400921251 abs_error=9.21251127467e-07 PASS
+crisp[2]: paper=0.1506 code=0.150640214543 abs_error=4.02145433394e-05 PASS
+crisp[3]: paper=0.2958 code=0.295770645067 abs_error=2.93549332656e-05 PASS
+normalized[1]: paper=0.3453 code=0.345257925807 abs_error=4.20741926886e-05 PASS
+normalized[2]: paper=0.2209 code=0.22094105554 abs_error=4.1055540379e-05 PASS
+normalized[3]: paper=0.4339 code=0.433801018652 abs_error=9.89813476904e-05 PASS
+eta[1]: paper=0.0511 code=0.051113890698 abs_error=1.38906980413e-05 PASS
+eta[2]: paper=0.0542 code=0.0542290871253 abs_error=2.90871253097e-05 PASS
+eta[3]: paper=0.0251 code=0.0251006308181 abs_error=6.30818130343e-07 PASS
+sigma[1,1]: paper=0.0217 code=0.0216821513549 abs_error=1.78486450901e-05 PASS
+sigma[1,2]: paper=0.2089 code=0.20888587953 abs_error=1.41204704592e-05 PASS
+sigma[1,3]: paper=0.112 code=0.111972071187 abs_error=2.79288133236e-05 PASS
+WSM[1]: paper=0.10223582 code=0.102210999856 abs_error=2.48201440373e-05 PASS
+WPM[1]: paper=1.6803437727312813e-05 code=1.678154012e-05 abs_error=2.1897607341e-08 PASS
+sigma[2,1]: paper=0.077 code=0.0770007944478 abs_error=7.94447758773e-07 PASS
+sigma[2,2]: paper=0.2758 code=0.275772509755 abs_error=2.74902454106e-05 PASS
+sigma[2,3]: paper=0.0482 code=0.048201132475 abs_error=1.13247497985e-06 PASS
+WSM[2]: paper=0.1084263 code=0.108424304339 abs_error=1.99566141203e-06 PASS
+WPM[2]: paper=3.387770403641167e-05 code=3.38699120314e-05 abs_error=7.7920049645e-09 PASS
+sigma[3,1]: paper=0.023 code=0.0230260940311 abs_error=2.60940311069e-05 PASS
+sigma[3,2]: paper=0.1525 code=0.152512220804 abs_error=1.22208037227e-05 PASS
+sigma[3,3]: paper=0.0197 code=0.0197159932849 abs_error=1.599328489e-05 PASS
+WSM[3]: paper=0.05017698 code=0.0501989704825 abs_error=2.19904825333e-05 PASS
+WPM[3]: paper=2.286893026653668e-06 code=2.2911537274e-06 abs_error=4.26070074244e-09 PASS
+ranking: paper=p2 > p1 > p3 code=p2 > p1 > p3 abs_error=- PASS
+
+=== Case 2 / rounded diagnostic ===
+crisp[1]: paper=0.2354 code=0.2354 abs_error=0 PASS
+crisp[2]: paper=0.1506 code=0.1506 abs_error=0 PASS
+crisp[3]: paper=0.2958 code=0.2958 abs_error=0 PASS
+normalized[1]: paper=0.3453 code=0.3453 abs_error=0 PASS
+normalized[2]: paper=0.2209 code=0.2209 abs_error=0 PASS
+normalized[3]: paper=0.4339 code=0.4339 abs_error=0 PASS
+eta[1]: paper=0.0511 code=0.0511263117189 abs_error=2.63117188637e-05 PASS
+eta[2]: paper=0.0542 code=0.054230088852 abs_error=3.00888520182e-05 PASS
+eta[3]: paper=0.0251 code=0.0250896334465 abs_error=1.03665534867e-05 PASS
+sigma[1,1]: paper=0.0217 code=0.0217 abs_error=0 PASS
+sigma[1,2]: paper=0.2089 code=0.2089 abs_error=0 PASS
+sigma[1,3]: paper=0.112 code=0.112 abs_error=0 PASS
+WSM[1]: paper=0.10223582 code=0.10223582 abs_error=0 PASS
+WPM[1]: paper=1.6803437727312813e-05 code=1.68034377273e-05 abs_error=0 PASS
+sigma[2,1]: paper=0.077 code=0.077 abs_error=0 PASS
+sigma[2,2]: paper=0.2758 code=0.2758 abs_error=0 PASS
+sigma[2,3]: paper=0.0482 code=0.0482 abs_error=0 PASS
+WSM[2]: paper=0.1084263 code=0.1084263 abs_error=0 PASS
+WPM[2]: paper=3.387770403641167e-05 code=3.38777040364e-05 abs_error=0 PASS
+sigma[3,1]: paper=0.023 code=0.023 abs_error=0 PASS
+sigma[3,2]: paper=0.1525 code=0.1525 abs_error=0 PASS
+sigma[3,3]: paper=0.0197 code=0.0197 abs_error=0 PASS
+WSM[3]: paper=0.05017698 code=0.05017698 abs_error=0 PASS
+WPM[3]: paper=2.286893026653668e-06 code=2.28689302665e-06 abs_error=0 PASS
+ranking: paper=p2 > p1 > p3 code=p2 > p1 > p3 abs_error=- PASS
+
+=== Case 3 / full ===
+crisp[1]: paper=0.3087 code=0.308659366812 abs_error=4.06331878227e-05 PASS
+crisp[2]: paper=0.2057 code=0.205661557519 abs_error=3.84424810529e-05 PASS
+crisp[3]: paper=0.4395 code=0.439541448403 abs_error=4.14484027436e-05 PASS
+normalized[1]: paper=0.3236 code=0.323588995263 abs_error=1.10047369541e-05 PASS
+normalized[2]: paper=0.2156 code=0.215609257056 abs_error=9.25705613045e-06 PASS
+normalized[3]: paper=0.4607 code=0.460801747681 abs_error=0.000101747680824 FAIL
+eta[1]: paper=0.0528 code=0.219287859325 abs_error=0.166487859325 FAIL
+eta[2]: paper=0.0097 code=0.0979061525616 abs_error=0.0882061525616 FAIL
+eta[3]: paper=0.0251 code=0.155961651201 abs_error=0.130861651201 FAIL
+sigma[1,1]: paper=0.4125 code=0.412457315983 abs_error=4.26840168556e-05 PASS
+sigma[1,2]: paper=0.542 code=0.541989127012 abs_error=1.0872987638e-05 PASS
+sigma[1,3]: paper=0.4023 code=0.402255859172 abs_error=4.41408282711e-05 PASS
+WSM[1]: paper=0.43567981 code=0.435684724397 abs_error=4.91439669831e-06 PASS
+WPM[1]: paper=0.0028910044070040953 code=0.00289099425282 abs_error=1.01541794595e-08 PASS
+sigma[2,1]: paper=0.3326 code=0.332641977311 abs_error=4.19773107722e-05 PASS
+sigma[2,2]: paper=0.1912 code=0.191243983077 abs_error=4.39830773813e-05 PASS
+sigma[2,3]: paper=0.1014 code=0.101413754525 abs_error=1.37545252971e-05 PASS
+WSM[2]: paper=0.19556706000000001 code=0.195604891652 abs_error=3.7831652206e-05 PASS
+WPM[2]: paper=0.00020726385403753116 code=0.000207413471035 abs_error=1.49616997163e-07 PASS
+sigma[3,1]: paper=0.4659 code=0.465874729335 abs_error=2.52706654957e-05 PASS
+sigma[3,2]: paper=0.3232 code=0.323200556752 abs_error=5.56752098035e-07 PASS
+sigma[3,3]: paper=0.1965 code=0.196473317816 abs_error=2.66821837661e-05 PASS
+WSM[3]: paper=0.31097471 code=0.310972215728 abs_error=2.49427238624e-06 PASS
+WPM[3]: paper=0.0009510472606115648 code=0.00095108667461 abs_error=3.94139986448e-08 PASS
+ranking: paper=p1 > p3 > p2 code=p1 > p3 > p2 abs_error=- PASS
+Step5 eta[1]: paper=0.2193 code=0.219287859325 abs_error=1.21406752385e-05 PASS
+Step5 eta[2]: paper=0.0979 code=0.0979061525616 abs_error=6.15256162034e-06 PASS
+Step5 eta[3]: paper=0.152 code=0.155961651201 abs_error=0.00396165120111 FAIL
+Output ranking: paper=p2 > p1 > p3 code=p1 > p3 > p2 abs_error=- FAIL
+
+=== Case 3 / rounded diagnostic ===
+crisp[1]: paper=0.3087 code=0.3087 abs_error=0 PASS
+crisp[2]: paper=0.2057 code=0.2057 abs_error=0 PASS
+crisp[3]: paper=0.4395 code=0.4395 abs_error=0 PASS
+normalized[1]: paper=0.3236 code=0.3236 abs_error=0 PASS
+normalized[2]: paper=0.2156 code=0.2156 abs_error=0 PASS
+normalized[3]: paper=0.4607 code=0.4607 abs_error=0 PASS
+eta[1]: paper=0.0528 code=0.219285407204 abs_error=0.166485407204 FAIL
+eta[2]: paper=0.0097 code=0.097887161927 abs_error=0.088187161927 FAIL
+eta[3]: paper=0.0251 code=0.15596287863 abs_error=0.13086287863 FAIL
+sigma[1,1]: paper=0.4125 code=0.4125 abs_error=0 PASS
+sigma[1,2]: paper=0.542 code=0.542 abs_error=0 PASS
+sigma[1,3]: paper=0.4023 code=0.4023 abs_error=0 PASS
+WSM[1]: paper=0.43567981 code=0.43567981 abs_error=0 PASS
+WPM[1]: paper=0.0028910044070040953 code=0.002891004407 abs_error=0 PASS
+sigma[2,1]: paper=0.3326 code=0.3326 abs_error=0 PASS
+sigma[2,2]: paper=0.1912 code=0.1912 abs_error=0 PASS
+sigma[2,3]: paper=0.1014 code=0.1014 abs_error=0 PASS
+WSM[2]: paper=0.19556706000000001 code=0.19556706 abs_error=0 PASS
+WPM[2]: paper=0.00020726385403753116 code=0.000207263854038 abs_error=0 PASS
+sigma[3,1]: paper=0.4659 code=0.4659 abs_error=0 PASS
+sigma[3,2]: paper=0.3232 code=0.3232 abs_error=0 PASS
+sigma[3,3]: paper=0.1965 code=0.1965 abs_error=0 PASS
+WSM[3]: paper=0.31097471 code=0.31097471 abs_error=0 PASS
+WPM[3]: paper=0.0009510472606115648 code=0.000951047260612 abs_error=0 PASS
+ranking: paper=p1 > p3 > p2 code=p1 > p3 > p2 abs_error=- PASS
+Step5 eta[1]: paper=0.2193 code=0.219285407204 abs_error=1.4592796498e-05 PASS
+Step5 eta[2]: paper=0.0979 code=0.097887161927 abs_error=1.28380729812e-05 PASS
+Step5 eta[3]: paper=0.152 code=0.15596287863 abs_error=0.00396287863031 FAIL
+Output ranking: paper=p2 > p1 > p3 code=p1 > p3 > p2 abs_error=- FAIL
+
+=== Example 5 / full ===
+M(alpha1): paper=0.325 code=0.325 abs_error=5.55111512313e-17 PASS
+M(alpha2): paper=0.325 code=0.325 abs_error=5.55111512313e-17 PASS
+N(alpha1): paper=1.241 code=1.24046336646 abs_error=0.000536633537669 FAIL
+N(alpha2): paper=1.116 code=1.11632330671 abs_error=0.000323306708532 FAIL
+
+=== Table 4 / full ===
+pair1/M: paper=False code=False abs_error=- PASS
+pair1/H: paper=True code=True abs_error=- PASS
+pair1/P: paper=True code=True abs_error=- PASS
+pair1/C: paper=True code=True abs_error=- PASS
+pair1/R: paper=True code=True abs_error=- PASS
+pair1/N: paper=True code=True abs_error=- PASS
+pair2/M: paper=True code=True abs_error=- PASS
+pair2/H: paper=False code=False abs_error=- PASS
+pair2/P: paper=True code=True abs_error=- PASS
+pair2/C: paper=True code=True abs_error=- PASS
+pair2/R: paper=True code=True abs_error=- PASS
+pair2/N: paper=True code=True abs_error=- PASS
+pair3/M: paper=True code=True abs_error=- PASS
+pair3/H: paper=True code=True abs_error=- PASS
+pair3/P: paper=False code=False abs_error=- PASS
+pair3/C: paper=True code=True abs_error=- PASS
+pair3/R: paper=True code=True abs_error=- PASS
+pair3/N: paper=True code=True abs_error=- PASS
+pair4/M: paper=True code=True abs_error=- PASS
+pair4/H: paper=True code=True abs_error=- PASS
+pair4/P: paper=True code=True abs_error=- PASS
+pair4/C: paper=False code=False abs_error=- PASS
+pair4/R: paper=True code=True abs_error=- PASS
+pair4/N: paper=True code=True abs_error=- PASS
+pair5/M: paper=True code=False abs_error=- FAIL
+pair5/H: paper=True code=True abs_error=- PASS
+pair5/P: paper=True code=False abs_error=- FAIL
+pair5/C: paper=True code=True abs_error=- PASS
+pair5/R: paper=False code=False abs_error=- PASS
+pair5/G: paper=True code=True abs_error=- PASS
+pair5/N: paper=True code=True abs_error=- PASS
+pair6/M: paper=True code=True abs_error=- PASS
+pair6/H: paper=True code=True abs_error=- PASS
+pair6/P: paper=True code=True abs_error=- PASS
+pair6/C: paper=True code=True abs_error=- PASS
+pair6/R: paper=True code=True abs_error=- PASS
+pair6/G: paper=False code=False abs_error=- PASS
+pair6/N: paper=True code=True abs_error=- PASS
+
+=== Example 6 / full ===
+H(alpha3): paper=1.1 code=0.55 abs_error=0.55 FAIL
+H(alpha4): paper=1.1 code=0.55 abs_error=0.55 FAIL
+N(alpha3): paper=0.896 code=0.896108127781 abs_error=0.000108127780719 FAIL
+N(alpha4): paper=1.049 code=1.04849812658 abs_error=0.000501873422179 FAIL
+
+=== Example 7 / full ===
+P(alpha5): paper=0.05 code=0.05 abs_error=1.38777878078e-17 PASS
+P(alpha6): paper=0.05 code=0.05 abs_error=6.93889390391e-17 PASS
+N(alpha5): paper=0.924 code=0.923797450463 abs_error=0.000202549536655 FAIL
+N(alpha6): paper=1.105 code=1.10496586731 abs_error=3.41326866866e-05 PASS
+
+=== Example 8 / full ===
+C(alpha7): paper=0.175 code=0.175 abs_error=0 PASS
+C(alpha8): paper=0.175 code=0.175 abs_error=0 PASS
+N(alpha7): paper=0.533 code=0.532999710101 abs_error=2.89899418804e-07 PASS
+N(alpha8): paper=0.788 code=0.787964797344 abs_error=3.52026557038e-05 PASS
+
+=== Example 9 / full ===
+R(alpha9): paper=0.0 code=0 abs_error=0 PASS
+R(alpha10): paper=0.0 code=0 abs_error=0 PASS
+N(alpha9): paper=0.331 code=0.331371548905 abs_error=0.000371548905123 FAIL
+N(alpha10): paper=0.464 code=0.46375406225 abs_error=0.0002459377503 FAIL
+
+=== Example 10 / full ===
+G(alpha11): paper=0.85 code=0.85 abs_error=1.11022302463e-16 PASS
+G(alpha12): paper=0.85 code=0.85 abs_error=1.11022302463e-16 PASS
+N(alpha11): paper=0.022 code=0.0216821513549 abs_error=0.00031784864509 FAIL
+N(alpha12): paper=0.077 code=0.0770007944478 abs_error=7.94447758773e-07 PASS
+
+=== Fig. 2 / DR / full ===
+M: paper=83.0 code=66.6666666667 abs_error=16.3333333333 FAIL
+H: paper=83.0 code=83.3333333333 abs_error=0.333333333333 FAIL
+P: paper=83.0 code=66.6666666667 abs_error=16.3333333333 FAIL
+C: paper=83.0 code=83.3333333333 abs_error=0.333333333333 FAIL
+R: paper=83.0 code=83.3333333333 abs_error=0.333333333333 FAIL
+G: paper=50.0 code=50 abs_error=0 PASS
+N: paper=100.0 code=100 abs_error=0 PASS
+
+=== Table 5 / Chen ===
+Case 1: paper=False code=False abs_error=- PASS
+Case 2: paper=False code=False abs_error=- PASS
+Case 3: paper=False code=False abs_error=- PASS
+Example 3: paper=False code=False abs_error=- PASS
+Example 4: paper=False code=False abs_error=- PASS
+
+=== Fig. 3 / RI / Chen ===
+Case 1: paper=100.0 code=100 abs_error=0 PASS
+Case 2: paper=0.0 code=0 abs_error=0 PASS
+Case 3: paper=100.0 code=100 abs_error=0 PASS
+
+=== Table 5 / Rani literal ===
+Case 1: paper=False code=None abs_error=- UNRESOLVED
+Case 2: paper=False code=True abs_error=- FAIL
+Case 3: paper=True code=True abs_error=- PASS
+Example 3: paper=False code=True abs_error=- FAIL
+Example 4: paper=True code=True abs_error=- PASS
+
+=== Fig. 3 / RI / Rani literal ===
+Case 1: paper=100.0 code=None abs_error=- UNRESOLVED
+Case 2: paper=100.0 code=0 abs_error=100 FAIL
+Case 3: paper=0.0 code=0 abs_error=0 PASS
+
+=== Table 5 / Rani reference52 ===
+Case 1: paper=False code=False abs_error=- PASS
+Case 2: paper=False code=None abs_error=- UNRESOLVED
+Case 3: paper=True code=True abs_error=- PASS
+Example 3: paper=False code=None abs_error=- UNRESOLVED
+Example 4: paper=True code=True abs_error=- PASS
+
+=== Fig. 3 / RI / Rani reference52 ===
+Case 1: paper=100.0 code=100 abs_error=0 PASS
+Case 2: paper=100.0 code=None abs_error=- UNRESOLVED
+Case 3: paper=0.0 code=0 abs_error=0 PASS
+
+=== Table 5 / Proposed ===
+Case 1: paper=False code=False abs_error=- PASS
+Case 2: paper=False code=False abs_error=- PASS
+Case 3: paper=False code=False abs_error=- PASS
+Example 3: paper=False code=False abs_error=- PASS
+Example 4: paper=False code=False abs_error=- PASS
+
+=== Fig. 3 / RI / Proposed ===
+Case 1: paper=100.0 code=100 abs_error=0 PASS
+Case 2: paper=100.0 code=100 abs_error=0 PASS
+Case 3: paper=100.0 code=100 abs_error=0 PASS
+
+=== Case 1 baselines / Chen ===
+ranking: paper=p1 > p4 > p3 > p2 > p5 code=p3 > p4 > p2 > p1 > p5 abs_error=- FAIL
+
+=== Case 1 baselines / Rani literal ===
+ranking: paper=p1 > p4 > p3 > p2 > p5 code=None abs_error=- UNRESOLVED
+
+=== Case 1 baselines / Rani reference52 ===
+ranking: paper=p1 > p4 > p3 > p2 > p5 code=p5 > p1 > p2 > p4 > p3 abs_error=- FAIL
+
+=== Case 2 baseline / Chen ===
+ranking: paper=p1 = p2 = p3 code=p1 = p2 = p3 abs_error=- PASS
+
+=== Example 1 / Chen ===
+score[1,1]: paper=1.05 code=1.05 abs_error=0 PASS
+score[1,2]: paper=1.095 code=1.09498743711 abs_error=1.256289338e-05 PASS
+score[2,1]: paper=1.05 code=1.05 abs_error=0 PASS
+score[2,2]: paper=1.095 code=1.09498743711 abs_error=1.256289338e-05 PASS
+normalized[1,1]: paper=0.5 code=0.5 abs_error=0 PASS
+normalized[1,2]: paper=0.5 code=0.5 abs_error=0 PASS
+normalized[2,1]: paper=0.5 code=0.5 abs_error=0 PASS
+normalized[2,2]: paper=0.5 code=0.5 abs_error=0 PASS
+weighted[1,1]: paper=0.6735 code=0.673652913262 abs_error=0.000152913261745 FAIL
+weighted[1,2]: paper=0.6395 code=0.639617572819 abs_error=0.000117572818879 FAIL
+weighted[2,1]: paper=0.6735 code=0.673652913262 abs_error=0.000152913261745 FAIL
+weighted[2,2]: paper=0.6395 code=0.639617572819 abs_error=0.000117572818879 FAIL
+weight[1]: paper=1.347 code=1.34730582652 abs_error=0.000305826523491 FAIL
+weight[2]: paper=1.279 code=1.27923514564 abs_error=0.000235145637759 FAIL
+WS[1]: paper=1.313 code=1.31327048608 abs_error=0.000270486080624 FAIL
+prose sigma[1,2]: paper=0.6 code=1.09498743711 abs_error=0.494987437107 FAIL
+WS[2]: paper=1.313 code=1.31327048608 abs_error=0.000270486080624 FAIL
+prose sigma[2,2]: paper=0.6 code=1.09498743711 abs_error=0.494987437107 FAIL
+ranking: paper=p1 = p2 code=p1 = p2 abs_error=- PASS
+
+=== Example 2 / Rani literal ===
+failure stage: paper=Eq.12 code=Eq.12 abs_error=- PASS
+score[1,1]: paper=0.0 code=0 abs_error=0 PASS
+score[1,2]: paper=0.0 code=0 abs_error=0 PASS
+score[2,1]: paper=0.0 code=0 abs_error=0 PASS
+score[2,2]: paper=0.0 code=0 abs_error=0 PASS
+
+=== Example 2 / Rani reference52 ===
+failure stage: paper=Eq.12 code=Eq.12 abs_error=- PASS
+score[1,1]: paper=0.0 code=0 abs_error=0 PASS
+score[1,2]: paper=0.0 code=0 abs_error=0 PASS
+score[2,1]: paper=0.0 code=0 abs_error=0 PASS
+score[2,2]: paper=0.0 code=0 abs_error=0 PASS
+
+=== ER / Chen ===
+all five Table5 rows: paper=0.0 code=0 abs_error=0 PASS
+
+=== ER / Rani literal ===
+all five Table5 rows: paper=50.0 code=None abs_error=- UNRESOLVED
+
+=== ER / Rani reference52 ===
+all five Table5 rows: paper=50.0 code=None abs_error=- UNRESOLVED
+
+=== ER / Proposed ===
+all five Table5 rows: paper=0.0 code=0 abs_error=0 PASS
+
+=== ER / printed-table arithmetic ===
+five listed rows: paper=50.0 code=40 abs_error=10 FAIL
+
+Counts: {'PASS': 326, 'FAIL': 61, 'UNRESOLVED': 8}
+Artifacts: D:\workspace\research\IVFF-MADM\reports
+Audit complete; mismatches and source ambiguities remain visible. This is not an all-match reproduction.

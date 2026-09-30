@@ -1,1 +1,17 @@
-"""Deferred: Example 3 must pass before extending numerical reproduction."""
+"""Example 4, PDF p. 10 (journal p. 5368)."""
+
+from src.ivffn import IVFFN
+from src.madm import CriterionType
+
+CRITERION_WEIGHTS = [IVFFN(.21,.45,.12,.40), IVFFN(.14,.26,.29,.40)]
+CRITERION_TYPES = [CriterionType.BENEFIT] * 2
+DECISION_MATRIX = [
+    [IVFFN(.20,.40,.20,.40), IVFFN(.15,.35,.15,.35)],
+    [IVFFN(.30,.42,.30,.42), IVFFN(.16,.25,.16,.25)],
+]
+THETA = .5
+PAPER_CRISP_WEIGHTS = [.3752,.2068]
+PAPER_NORMALIZED_WEIGHTS = [.6447,.3553]
+PAPER_SCORE_MATRIX = [[.3114,.2705],[.4039,.2141]]
+PAPER_FINAL_SCORES = [.1581,.1781]
+PAPER_RANKING = [1,0]

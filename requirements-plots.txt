@@ -1,0 +1,2 @@
+# Optional chart export only. The MADM algorithms use pure Python, not NumPy.
+matplotlib>=3.8,<4

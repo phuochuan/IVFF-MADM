@@ -6,6 +6,8 @@ from data import example3 as paper
 from src.hwm import hybrid_weighted_score
 from src.madm import solve_madm
 
+pytestmark = pytest.mark.paper
+
 
 @pytest.fixture(scope="module")
 def result():

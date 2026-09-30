@@ -1,108 +1,103 @@
-"""Audit Example 3 and stop on any checkpoint mismatch (exit status 1)."""
+"""Run the paper audit; retain mismatches and write reproducible artifacts."""
 
-from math import prod
+import argparse
+import csv
+import json
+import os
+from collections import Counter
+from pathlib import Path
 
-from data import example3 as paper
-from src.hwm import hybrid_weighted_score
-from src.madm import MADMResult, build_score_matrix, solve_madm
-from src.weights import crisp_weight, normalize_weights
-
-TOLERANCE = 1e-4
-
-
-def rounded_example3() -> MADMResult:
-    """Diagnostic B: round crisp, normalized weights and matrix to 4 decimals.
-
-    This is a tested rounding hypothesis, not a documented paper algorithm.
-    Final scores and HWM terms are not rounded internally.
-    """
-    crisp = [round(crisp_weight(weight), 4) for weight in paper.CRITERION_WEIGHTS]
-    normalized = [round(weight, 4) for weight in normalize_weights(crisp)]
-    matrix = [[round(value, 4) for value in row]
-              for row in build_score_matrix(paper.DECISION_MATRIX, paper.CRITERION_TYPES)]
-    final = [hybrid_weighted_score(row, normalized, paper.THETA) for row in matrix]
-    ranking = sorted(range(len(final)), key=final.__getitem__, reverse=True)
-    return MADMResult(crisp, normalized, matrix, final, ranking)
+from src.audit import DATASETS, Checkpoint, audit_all
 
 
-def literal_equation25(scores: list[float], crisp_weights: list[float], theta: float) -> float:
-    """Diagnostic only: take Eq. (25)'s tilde symbols literally as crisp weights.
-
-    This deliberately differs from the normalized weights in Step 4's prose
-    and Example 3's numerical substitution; it is never used in solve_madm.
-    """
-    terms = [weight * value for weight, value in zip(crisp_weights, scores)]
-    return theta * sum(terms) + (1 - theta) * prod(terms)
-
-
-def checkpoints(result: MADMResult) -> list[tuple[str, float, float]]:
-    """Return published references and computed values, with derived WSM/WPM."""
-    rows = []
-    for label, expected_values, actual_values in (
-        ("Crisp weight", paper.PAPER_CRISP_WEIGHTS, result.crisp_weights),
-        ("Normalized weight", paper.PAPER_NORMALIZED_WEIGHTS, result.normalized_weights),
-    ):
-        for j, (expected, actual) in enumerate(zip(expected_values, actual_values), 1):
-            rows.append((f"{label} r{j}", expected, actual))
-    for i, (expected_row, actual_row) in enumerate(zip(paper.PAPER_SCORE_MATRIX, result.score_matrix), 1):
-        for j, (expected, actual) in enumerate(zip(expected_row, actual_row), 1):
-            rows.append((f"Score matrix p{i},r{j}", expected, actual))
-    for i, row in enumerate(result.score_matrix):
-        printed_terms = [w * s for w, s in zip(paper.PAPER_NORMALIZED_WEIGHTS, paper.PAPER_SCORE_MATRIX[i])]
-        rows.append((f"Weighted sum p{i + 1} [derived]", sum(printed_terms),
-                     hybrid_weighted_score(row, result.normalized_weights, theta=1)))
-        rows.append((f"Weighted product p{i + 1} [derived]", prod(printed_terms),
-                     hybrid_weighted_score(row, result.normalized_weights, theta=0)))
-    for i, (expected, actual) in enumerate(zip(paper.PAPER_FINAL_SCORES, result.final_scores), 1):
-        rows.append((f"Final score p{i}", expected, actual))
-    return rows
-
-
-def ranking_text(ranking: list[int]) -> str:
-    return " > ".join(f"p{i + 1}" for i in ranking)
-
-
-def print_report(label: str, result: MADMResult) -> bool:
-    print(f"\n{label}")
-    print(f"{'Checkpoint':<35} {'Paper / derived':>17} {'Code':>17} {'Abs difference':>17} Status")
-    rows = checkpoints(result)
-    for name, expected, actual in rows:
-        difference = abs(expected - actual)
-        status = "PASS" if difference <= TOLERANCE else "FAIL"
-        print(f"{name:<35} {expected:17.12f} {actual:17.12f} {difference:17.12f} {status}")
-    print(f"Ranking\nPaper: {ranking_text(paper.PAPER_RANKING)}\nCode : {ranking_text(result.ranking)}")
-    maximum_error = max(abs(expected - actual) for _, expected, actual in rows)
-    passed = maximum_error <= TOLERANCE and result.ranking == paper.PAPER_RANKING
-    print(f"Maximum absolute error: {maximum_error:.12f}")
-    print(f"Status: {'PASS' if passed else 'FAIL'}")
-    return passed
+def write_reports(checks: list[Checkpoint], traces: dict, output: Path) -> None:
+    output.mkdir(parents=True,exist_ok=True)
+    records = [check.record() for check in checks]
+    with (output / "checkpoints.csv").open("w",encoding="utf-8",newline="") as handle:
+        writer = csv.DictWriter(handle,fieldnames=list(records[0]))
+        writer.writeheader()
+        writer.writerows(records)
+    (output / "audit.json").write_text(json.dumps(
+        {"counts":dict(Counter(c.status for c in checks)),"checkpoints":records,"traces":traces},
+        indent=2,ensure_ascii=False,allow_nan=False),encoding="utf-8")
+    lines = ["# Paper numerical audit", "",
+             "Generated by `python reproduce.py`. FAIL means a published checkpoint does not match;",
+             "UNRESOLVED means a source ambiguity or upstream failure prevents evaluation.",
+             "Primary strict numeric tolerance is 1e-4. Source-precision status is a separate column.",
+             "Rounded and baseline interpretation modes are not substitutes for full precision.", "",
+             "## Coverage summary", "",
+             "| Section / mode | PASS | FAIL | UNRESOLVED | Max numeric error |",
+             "|---|---:|---:|---:|---:|"]
+    sections = list(dict.fromkeys((c.section,c.mode) for c in checks))
+    for section,mode in sections:
+        group = [c for c in checks if (c.section,c.mode)==(section,mode)]
+        count = Counter(c.status for c in group)
+        maximum = max((c.error for c in group if c.error is not None),default=0)
+        lines.append(f"| {section} / {mode} | {count['PASS']} | {count['FAIL']} | {count['UNRESOLVED']} | {maximum:.12g} |")
+    for section,mode in sections:
+        lines.extend(["",f"## {section} — {mode}","",
+                      "| Checkpoint | Paper | Code | Abs error | Strict | Source precision | Note |",
+                      "|---|---|---|---|---|---|---|"])
+        for c in checks:
+            if (c.section,c.mode)!=(section,mode):
+                continue
+            error = "—" if c.error is None else f"{c.error:.12g}"
+            actual = "UNRESOLVED" if c.code is None else (f"{c.code:.12g}" if isinstance(c.code,float) else str(c.code))
+            lines.append(f"| {c.name} | {c.paper} | {actual} | {error} | {c.status} | {c.display_status} | {c.note} |")
+    lines.extend(["","## HWM from printed intermediates — diagnostic only","",
+                  "These calculations use printed matrix/weights, not original IVFFNs; they are excluded from checkpoint totals.",
+                  "", "| Dataset / alternative | Paper final | HWM of printed values | Abs error |",
+                  "|---|---:|---:|---:|"])
+    for label,d in DATASETS.items():
+        for i,(expected,actual) in enumerate(zip(d.PAPER_FINAL_SCORES,
+                traces["proposed"][label]["HWM_from_printed_intermediates"]),1):
+            lines.append(f"| {label} / p{i} | {expected} | {actual:.12g} | {abs(expected-actual):.12g} |")
+    diag = traces["example3_diagnostics"]
+    lines.extend(["","## Example 3 notation/substitution diagnostics","",
+                  "Neither diagnostic changes the solver. The printed p2 weights sum to 1.01.","",
+                  "| Interpretation | Paper final | Code | Abs error |", "|---|---:|---:|---:|"])
+    for name,expected,actual in [
+        ("Eq25 literal crisp / p1",.0398,diag["Eq25_literal_crisp_eta"][0]),
+        ("Eq25 literal crisp / p2",.0301,diag["Eq25_literal_crisp_eta"][1]),
+        ("Printed inconsistent p2 substitution",.0301,diag["printed_p2_eta"]),
+    ]:
+        lines.append(f"| {name} | {expected} | {actual:.12g} | {abs(expected-actual):.12g} |")
+    discrepancy_path = os.path.relpath(Path(__file__).resolve().parent/"DISCREPANCIES.md",output.resolve()).replace("\\","/")
+    lines.extend(["","## Full intermediate traces","",
+                  "See [audit.json](audit.json), including both baseline interpretations, rounded stages,",
+                  f"and HWM evaluated from printed intermediates. See [DISCREPANCIES.md]({discrepancy_path})",
+                  "for source ambiguities, domains, and provenance."])
+    (output / "reproduction.md").write_text("\n".join(lines)+"\n",encoding="utf-8")
 
 
 def main() -> int:
-    print("=== Example 3 ===")
-    print("Absolute tolerance: 1e-4; [derived] uses printed matrix + Step 2 weights.")
-    full = solve_madm(paper.DECISION_MATRIX, paper.CRITERION_WEIGHTS, paper.CRITERION_TYPES, paper.THETA)
-    passed = print_report("A. Full precision (primary implementation)", full)
-    print_report("B. Rounded intermediates (explicit diagnostic hypothesis)", rounded_example3())
-
-    print("\nDiagnostics only; neither changes the primary pipeline:")
-    print("Eq. (25) tilde weights interpreted literally as unnormalized crisp weights:")
-    for i, row in enumerate(full.score_matrix):
-        actual = literal_equation25(row, full.crisp_weights, paper.THETA)
-        print(f"p{i + 1}: paper={paper.PAPER_FINAL_SCORES[i]:.4f} code={actual:.12f} "
-              f"abs_error={abs(actual - paper.PAPER_FINAL_SCORES[i]):.12f}")
-
-    # Evaluate the inconsistent printed p2 substitution separately, unchanged.
-    terms = [w * s for w, s in zip(paper.PAPER_P2_SUBSTITUTED_WEIGHTS, paper.PAPER_SCORE_MATRIX[1])]
-    substituted = paper.THETA * sum(terms) + (1 - paper.THETA) * prod(terms)
-    print("Printed p2 substitution uses [0.5667, 0.4433] (sum=1.01):")
-    print(f"weighted_sum={sum(terms):.12f} weighted_product={prod(terms):.12f}")
-    print(f"p2: paper=0.0301 code={substituted:.12f} abs_error={abs(substituted - 0.0301):.12f}")
-
-    print("\n=== Case 1 ===")
-    print("Status: NOT RUN - Example 3 fails; implementation deferred by the checkpoint gate.")
-    print("Example 4, Case 2 and Case 3: NOT IMPLEMENTED.")
-    return 0 if passed else 1
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--section",help="Exact report section, e.g. 'Case 1', 'Example 10', 'Table 4'")
+    parser.add_argument("--output-dir",type=Path,default=Path("reports"))
+    parser.add_argument("--plots",action="store_true",help="Export comparison plots (requires requirements-plots.txt)")
+    args = parser.parse_args()
+    checks,traces = audit_all()
+    if args.section:
+        checks = [c for c in checks if c.section==args.section]
+        if not checks:
+            parser.error(f"unknown section: {args.section}")
+    write_reports(checks,traces,args.output_dir)
+    if args.plots:
+        from src.plots import export_plots
+        export_plots(traces,args.output_dir)
+    for section,mode in dict.fromkeys((c.section,c.mode) for c in checks):
+        print(f"\n=== {section} / {mode} ===")
+        for c in checks:
+            if (c.section,c.mode)==(section,mode):
+                error = "-" if c.error is None else f"{c.error:.12g}"
+                actual = f"{c.code:.12g}" if isinstance(c.code,float) else str(c.code)
+                print(f"{c.name}: paper={c.paper} code={actual} abs_error={error} {c.status}")
+    print("\nCounts:",dict(Counter(c.status for c in checks)))
+    print("Artifacts:",args.output_dir.resolve())
+    failed = any(c.status != "PASS" for c in checks)
+    print("Audit complete; mismatches and source ambiguities remain visible. This is not an all-match reproduction."
+          if failed else "All selected checkpoints PASS at the stated tolerances.")
+    return 1 if failed else 0
 
 
 if __name__ == "__main__":

@@ -2,3 +2,7 @@
 __pycache__/
 .pytest_cache/
 paper/extracted.txt
+paper/rani-extracted.txt
+reports/.matplotlib/
+reports/pdf-page-*.png
+reports/rani-page-*.png

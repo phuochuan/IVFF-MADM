@@ -1,0 +1,51 @@
+section,mode,name,paper,code,source,tolerance,display_tolerance,note,absolute_error,status,source_precision_status
+Case 2,full,crisp[1],0.2354,0.23540092125112747,PDF pp.11-12,0.0001,0.0001,,9.212511274669932e-07,PASS,PASS
+Case 2,full,crisp[2],0.1506,0.15064021454333942,PDF pp.11-12,0.0001,0.0001,,4.021454333941188e-05,PASS,PASS
+Case 2,full,crisp[3],0.2958,0.29577064506673445,PDF pp.11-12,0.0001,0.0001,,2.935493326555738e-05,PASS,PASS
+Case 2,full,normalized[1],0.3453,0.34525792580731135,PDF pp.11-12,0.0001,0.0001,,4.207419268864587e-05,PASS,PASS
+Case 2,full,normalized[2],0.2209,0.22094105554037904,PDF pp.11-12,0.0001,0.0001,,4.105554037903136e-05,PASS,PASS
+Case 2,full,normalized[3],0.4339,0.43380101865230963,PDF pp.11-12,0.0001,0.0001,,9.898134769037448e-05,PASS,PASS
+Case 2,full,eta[1],0.0511,0.05111389069804135,PDF pp.11-12,0.0001,0.0001,,1.3890698041349459e-05,PASS,PASS
+Case 2,full,eta[2],0.0542,0.05422908712530971,PDF pp.11-12,0.0001,0.0001,,2.908712530971108e-05,PASS,PASS
+Case 2,full,eta[3],0.0251,0.025100630818130343,PDF pp.11-12,0.0001,0.0001,,6.308181303427141e-07,PASS,PASS
+Case 2,full,"sigma[1,1]",0.0217,0.021682151354909862,PDF pp.11-12,0.0001,0.0001,,1.784864509013842e-05,PASS,PASS
+Case 2,full,"sigma[1,2]",0.2089,0.2088858795295408,PDF pp.11-12,0.0001,0.0001,,1.4120470459205725e-05,PASS,PASS
+Case 2,full,"sigma[1,3]",0.112,0.11197207118667643,PDF pp.11-12,0.0001,0.0001,,2.7928813323571666e-05,PASS,PASS
+Case 2,full,WSM[1],0.10223582,0.10221099985596273,PDF pp.11-12,0.0001,0.0001,Derived reference: printed matrix and Step 2 weights; not separately published,2.4820144037276948e-05,PASS,PASS
+Case 2,full,WPM[1],1.6803437727312813e-05,1.678154011997178e-05,PDF pp.11-12,0.0001,0.0001,Derived reference: printed matrix and Step 2 weights; not separately published,2.189760734103331e-08,PASS,PASS
+Case 2,full,"sigma[2,1]",0.077,0.07700079444775877,PDF pp.11-12,0.0001,0.0001,,7.944477587729093e-07,PASS,PASS
+Case 2,full,"sigma[2,2]",0.2758,0.2757725097545894,PDF pp.11-12,0.0001,0.0001,,2.7490245410599634e-05,PASS,PASS
+Case 2,full,"sigma[2,3]",0.0482,0.048201132474979855,PDF pp.11-12,0.0001,0.0001,,1.1324749798549694e-06,PASS,PASS
+Case 2,full,WSM[2],0.1084263,0.10842430433858798,PDF pp.11-12,0.0001,0.0001,Derived reference: printed matrix and Step 2 weights; not separately published,1.9956614120270055e-06,PASS,PASS
+Case 2,full,WPM[2],3.387770403641167e-05,3.386991203144717e-05,PDF pp.11-12,0.0001,0.0001,Derived reference: printed matrix and Step 2 weights; not separately published,7.792004964502397e-09,PASS,PASS
+Case 2,full,"sigma[3,1]",0.023,0.023026094031106864,PDF pp.11-12,0.0001,0.0001,,2.6094031106864424e-05,PASS,PASS
+Case 2,full,"sigma[3,2]",0.1525,0.15251222080372268,PDF pp.11-12,0.0001,0.0001,,1.2220803722678975e-05,PASS,PASS
+Case 2,full,"sigma[3,3]",0.0197,0.019715993284889998,PDF pp.11-12,0.0001,0.0001,,1.599328488999935e-05,PASS,PASS
+Case 2,full,WSM[3],0.05017698,0.050198970482533294,PDF pp.11-12,0.0001,0.0001,Derived reference: printed matrix and Step 2 weights; not separately published,2.1990482533290612e-05,PASS,PASS
+Case 2,full,WPM[3],2.286893026653668e-06,2.291153727396105e-06,PDF pp.11-12,0.0001,0.0001,Derived reference: printed matrix and Step 2 weights; not separately published,4.260700742436936e-09,PASS,PASS
+Case 2,full,ranking,p2 > p1 > p3,p2 > p1 > p3,PDF pp.11-12,0.0001,0.0001,,,PASS,PASS
+Case 2,rounded diagnostic,crisp[1],0.2354,0.2354,PDF pp.11-12,0.0001,0.0001,,0.0,PASS,PASS
+Case 2,rounded diagnostic,crisp[2],0.1506,0.1506,PDF pp.11-12,0.0001,0.0001,,0.0,PASS,PASS
+Case 2,rounded diagnostic,crisp[3],0.2958,0.2958,PDF pp.11-12,0.0001,0.0001,,0.0,PASS,PASS
+Case 2,rounded diagnostic,normalized[1],0.3453,0.3453,PDF pp.11-12,0.0001,0.0001,,0.0,PASS,PASS
+Case 2,rounded diagnostic,normalized[2],0.2209,0.2209,PDF pp.11-12,0.0001,0.0001,,0.0,PASS,PASS
+Case 2,rounded diagnostic,normalized[3],0.4339,0.4339,PDF pp.11-12,0.0001,0.0001,,0.0,PASS,PASS
+Case 2,rounded diagnostic,eta[1],0.0511,0.05112631171886366,PDF pp.11-12,0.0001,0.0001,,2.6311718863657185e-05,PASS,PASS
+Case 2,rounded diagnostic,eta[2],0.0542,0.05423008885201821,PDF pp.11-12,0.0001,0.0001,,3.0088852018210488e-05,PASS,PASS
+Case 2,rounded diagnostic,eta[3],0.0251,0.02508963344651333,PDF pp.11-12,0.0001,0.0001,,1.0366553486670926e-05,PASS,PASS
+Case 2,rounded diagnostic,"sigma[1,1]",0.0217,0.0217,PDF pp.11-12,0.0001,0.0001,,0.0,PASS,PASS
+Case 2,rounded diagnostic,"sigma[1,2]",0.2089,0.2089,PDF pp.11-12,0.0001,0.0001,,0.0,PASS,PASS
+Case 2,rounded diagnostic,"sigma[1,3]",0.112,0.112,PDF pp.11-12,0.0001,0.0001,,0.0,PASS,PASS
+Case 2,rounded diagnostic,WSM[1],0.10223582,0.10223582,PDF pp.11-12,0.0001,0.0001,Derived reference: printed matrix and Step 2 weights; not separately published,0.0,PASS,PASS
+Case 2,rounded diagnostic,WPM[1],1.6803437727312813e-05,1.6803437727312813e-05,PDF pp.11-12,0.0001,0.0001,Derived reference: printed matrix and Step 2 weights; not separately published,0.0,PASS,PASS
+Case 2,rounded diagnostic,"sigma[2,1]",0.077,0.077,PDF pp.11-12,0.0001,0.0001,,0.0,PASS,PASS
+Case 2,rounded diagnostic,"sigma[2,2]",0.2758,0.2758,PDF pp.11-12,0.0001,0.0001,,0.0,PASS,PASS
+Case 2,rounded diagnostic,"sigma[2,3]",0.0482,0.0482,PDF pp.11-12,0.0001,0.0001,,0.0,PASS,PASS
+Case 2,rounded diagnostic,WSM[2],0.1084263,0.1084263,PDF pp.11-12,0.0001,0.0001,Derived reference: printed matrix and Step 2 weights; not separately published,0.0,PASS,PASS
+Case 2,rounded diagnostic,WPM[2],3.387770403641167e-05,3.387770403641167e-05,PDF pp.11-12,0.0001,0.0001,Derived reference: printed matrix and Step 2 weights; not separately published,0.0,PASS,PASS
+Case 2,rounded diagnostic,"sigma[3,1]",0.023,0.023,PDF pp.11-12,0.0001,0.0001,,0.0,PASS,PASS
+Case 2,rounded diagnostic,"sigma[3,2]",0.1525,0.1525,PDF pp.11-12,0.0001,0.0001,,0.0,PASS,PASS
+Case 2,rounded diagnostic,"sigma[3,3]",0.0197,0.0197,PDF pp.11-12,0.0001,0.0001,,0.0,PASS,PASS
+Case 2,rounded diagnostic,WSM[3],0.05017698,0.05017698,PDF pp.11-12,0.0001,0.0001,Derived reference: printed matrix and Step 2 weights; not separately published,0.0,PASS,PASS
+Case 2,rounded diagnostic,WPM[3],2.286893026653668e-06,2.286893026653668e-06,PDF pp.11-12,0.0001,0.0001,Derived reference: printed matrix and Step 2 weights; not separately published,0.0,PASS,PASS
+Case 2,rounded diagnostic,ranking,p2 > p1 > p3,p2 > p1 > p3,PDF pp.11-12,0.0001,0.0001,,,PASS,PASS

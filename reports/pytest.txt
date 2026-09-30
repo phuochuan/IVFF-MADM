@@ -1,0 +1,430 @@
+...............................F....F......................FF........... [ 17%]
+....F............................................F.F.FF................. [ 35%]
+..................FFFF..................FF..FF......FFFF........F....... [ 53%]
+............FFF.F......F........FFFFF....ss....FsF..FFss............Fs.. [ 70%]
+...........FFFFFFFFFF............ss.F................................... [ 88%]
+...............................................                          [100%]
+================================== FAILURES ===================================
+________________________ test_case1_checkpoint[eta[5]] ________________________
+tests\test_case1.py:19: in test_case1_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=1e-4,rel=0)
+E   assert 0.347805540153602 == 0.3486 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.347805540153602
+E     Expected: 0.3486 ± 1.0e-04
+________________________ test_case1_checkpoint[WSM[1]] ________________________
+tests\test_case1.py:19: in test_case1_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=1e-4,rel=0)
+E   assert 0.832230141007231 == 0.83233525 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.832230141007231
+E     Expected: 0.83233525 ± 1.0e-04
+______________________ test_case1_checkpoint[sigma[5,4]] ______________________
+tests\test_case1.py:19: in test_case1_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=1e-4,rel=0)
+E   assert 0.7256060299705511 == 0.7523 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.7256060299705511
+E     Expected: 0.7523 ± 1.0e-04
+________________________ test_case1_checkpoint[WSM[5]] ________________________
+tests\test_case1.py:19: in test_case1_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=1e-4,rel=0)
+E   assert 0.6951785679609973 == 0.6968458000000001 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.6951785679609973
+E     Expected: 0.6968458000000001 ± 1.0e-04
+_____________________________ test_final_score[1] _____________________________
+tests\test_example3.py:54: in test_final_score
+    assert result.final_scores[i] == pytest.approx(paper.PAPER_FINAL_SCORES[i], abs=1e-4)
+E   assert 0.029630491972788026 == 0.0301 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.029630491972788026
+E     Expected: 0.0301 ± 1.0e-04
+______________ test_published_checkpoint[Example 4/full/eta[1]] _______________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.1651394147541993 == 0.1581 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.1651394147541993
+E     Expected: 0.1581 ± 1.0e-04
+____________ test_published_checkpoint[Example 4/full/sigma[1,1]] _____________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.3313715489051229 == 0.3114 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.3313715489051229
+E     Expected: 0.3114 ± 1.0e-04
+______________ test_published_checkpoint[Example 4/full/WSM[1]] _______________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.3097475401626065 == 0.29686823 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.3097475401626065
+E     Expected: 0.29686823 ± 1.0e-04
+______________ test_published_checkpoint[Example 4/full/WPM[1]] _______________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.020531289345792094 == 0.019294732208367003 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.020531289345792094
+E     Expected: 0.019294732208367003 ± 1.0e-04
+____________ test_published_checkpoint[Case 3/full/normalized[3]] _____________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.4608017476808236 == 0.4607 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.4608017476808236
+E     Expected: 0.4607 ± 1.0e-04
+________________ test_published_checkpoint[Case 3/full/eta[1]] ________________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.21928785932476147 == 0.0528 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.21928785932476147
+E     Expected: 0.0528 ± 1.0e-04
+________________ test_published_checkpoint[Case 3/full/eta[2]] ________________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.09790615256162034 == 0.0097 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.09790615256162034
+E     Expected: 0.0097 ± 1.0e-04
+________________ test_published_checkpoint[Case 3/full/eta[3]] ________________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.15596165120111197 == 0.0251 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.15596165120111197
+E     Expected: 0.0251 ± 1.0e-04
+_____________ test_published_checkpoint[Case 3/full/Step5 eta[3]] _____________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.15596165120111197 == 0.152 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.15596165120111197
+E     Expected: 0.152 ± 1.0e-04
+____________ test_published_checkpoint[Case 3/full/Output ranking] ____________
+tests\test_paper.py:17: in test_published_checkpoint
+    assert checkpoint.code == checkpoint.paper
+E   AssertionError: assert 'p1 > p3 > p2' == 'p2 > p1 > p3'
+E     
+E     - p2 > p1 > p3
+E     + p1 > p3 > p2
+_____________ test_published_checkpoint[Example 5/full/N(alpha1)] _____________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 1.2404633664623308 == 1.241 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 1.2404633664623308
+E     Expected: 1.241 ± 1.0e-04
+_____________ test_published_checkpoint[Example 5/full/N(alpha2)] _____________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 1.1163233067085319 == 1.116 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 1.1163233067085319
+E     Expected: 1.116 ± 1.0e-04
+_____________ test_published_checkpoint[Example 6/full/H(alpha3)] _____________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.55 == 1.1 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.55
+E     Expected: 1.1 ± 1.0e-04
+_____________ test_published_checkpoint[Example 6/full/H(alpha4)] _____________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.55 == 1.1 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.55
+E     Expected: 1.1 ± 1.0e-04
+_____________ test_published_checkpoint[Example 6/full/N(alpha3)] _____________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.8961081277807187 == 0.896 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.8961081277807187
+E     Expected: 0.896 ± 1.0e-04
+_____________ test_published_checkpoint[Example 6/full/N(alpha4)] _____________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 1.0484981265778206 == 1.049 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 1.0484981265778206
+E     Expected: 1.049 ± 1.0e-04
+_____________ test_published_checkpoint[Example 7/full/N(alpha5)] _____________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.9237974504633446 == 0.924 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.9237974504633446
+E     Expected: 0.924 ± 1.0e-04
+_____________ test_published_checkpoint[Example 9/full/N(alpha9)] _____________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.3313715489051229 == 0.331 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.3313715489051229
+E     Expected: 0.331 ± 1.0e-04
+____________ test_published_checkpoint[Example 9/full/N(alpha10)] _____________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.46375406224970017 == 0.464 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.46375406224970017
+E     Expected: 0.464 ± 1.0e-04
+_______________ test_published_checkpoint[Table 4/full/pair5/M] _______________
+tests\test_paper.py:17: in test_published_checkpoint
+    assert checkpoint.code == checkpoint.paper
+E   AssertionError: assert False == True
+E    +  where False = Checkpoint(section='Table 4', mode='full', name='pair5/M', paper=True, code=False, source='PDF p.15', tolerance=0.0001, display_tolerance=0.0001, note='').code
+E    +  and   True = Checkpoint(section='Table 4', mode='full', name='pair5/M', paper=True, code=False, source='PDF p.15', tolerance=0.0001, display_tolerance=0.0001, note='').paper
+_______________ test_published_checkpoint[Table 4/full/pair5/P] _______________
+tests\test_paper.py:17: in test_published_checkpoint
+    assert checkpoint.code == checkpoint.paper
+E   AssertionError: assert False == True
+E    +  where False = Checkpoint(section='Table 4', mode='full', name='pair5/P', paper=True, code=False, source='PDF p.15', tolerance=0.0001, display_tolerance=0.0001, note='').code
+E    +  and   True = Checkpoint(section='Table 4', mode='full', name='pair5/P', paper=True, code=False, source='PDF p.15', tolerance=0.0001, display_tolerance=0.0001, note='').paper
+____________ test_published_checkpoint[Example 10/full/N(alpha11)] ____________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.021682151354909862 == 0.022 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.021682151354909862
+E     Expected: 0.022 ± 1.0e-04
+________________ test_published_checkpoint[Fig. 2 / DR/full/M] ________________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 66.66666666666667 == 83.0 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 66.66666666666667
+E     Expected: 83.0 ± 1.0e-04
+________________ test_published_checkpoint[Fig. 2 / DR/full/H] ________________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 83.33333333333333 == 83.0 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 83.33333333333333
+E     Expected: 83.0 ± 1.0e-04
+________________ test_published_checkpoint[Fig. 2 / DR/full/P] ________________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 66.66666666666667 == 83.0 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 66.66666666666667
+E     Expected: 83.0 ± 1.0e-04
+________________ test_published_checkpoint[Fig. 2 / DR/full/C] ________________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 83.33333333333333 == 83.0 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 83.33333333333333
+E     Expected: 83.0 ± 1.0e-04
+________________ test_published_checkpoint[Fig. 2 / DR/full/R] ________________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 83.33333333333333 == 83.0 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 83.33333333333333
+E     Expected: 83.0 ± 1.0e-04
+__________ test_published_checkpoint[Case 1 baselines/Chen/ranking] ___________
+tests\test_paper.py:17: in test_published_checkpoint
+    assert checkpoint.code == checkpoint.paper
+E   AssertionError: assert 'p3 > p4 > p2 > p1 > p5' == 'p1 > p4 > p3 > p2 > p5'
+E     
+E     - p1 > p4 > p3 > p2 > p5
+E     + p3 > p4 > p2 > p1 > p5
+____ test_published_checkpoint[Case 1 baselines/Rani reference52/ranking] _____
+tests\test_paper.py:17: in test_published_checkpoint
+    assert checkpoint.code == checkpoint.paper
+E   AssertionError: assert 'p5 > p1 > p2 > p4 > p3' == 'p1 > p4 > p3 > p2 > p5'
+E     
+E     - p1 > p4 > p3 > p2 > p5
+E     + p5 > p1 > p2 > p4 > p3
+___________ test_published_checkpoint[Table 5/Rani literal/Case 2] ____________
+tests\test_paper.py:17: in test_published_checkpoint
+    assert checkpoint.code == checkpoint.paper
+E   AssertionError: assert True == False
+E    +  where True = Checkpoint(section='Table 5', mode='Rani literal', name='Case 2', paper=False, code=True, source='PDF p.16', tolerance=0.0001, display_tolerance=0.0001, note='zero correlation denominator').code
+E    +  and   False = Checkpoint(section='Table 5', mode='Rani literal', name='Case 2', paper=False, code=True, source='PDF p.16', tolerance=0.0001, display_tolerance=0.0001, note='zero correlation denominator').paper
+_________ test_published_checkpoint[Fig. 3 / RI/Rani literal/Case 2] __________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.0 == 100.0 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.0
+E     Expected: 100.0 ± 1.0e-04
+__________ test_published_checkpoint[Table 5/Rani literal/Example 3] __________
+tests\test_paper.py:17: in test_published_checkpoint
+    assert checkpoint.code == checkpoint.paper
+E   AssertionError: assert True == False
+E    +  where True = Checkpoint(section='Table 5', mode='Rani literal', name='Example 3', paper=False, code=True, source='PDF p.16', tolerance=0.0001, display_tolerance=0.0001, note='zero correlation denominator').code
+E    +  and   False = Checkpoint(section='Table 5', mode='Rani literal', name='Example 3', paper=False, code=True, source='PDF p.16', tolerance=0.0001, display_tolerance=0.0001, note='zero correlation denominator').paper
+___________ test_published_checkpoint[Example 1/Chen/weighted[1,1]] ___________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.6736529132617453 == 0.6735 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.6736529132617453
+E     Expected: 0.6735 ± 1.0e-04
+___________ test_published_checkpoint[Example 1/Chen/weighted[1,2]] ___________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.6396175728188792 == 0.6395 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.6396175728188792
+E     Expected: 0.6395 ± 1.0e-04
+___________ test_published_checkpoint[Example 1/Chen/weighted[2,1]] ___________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.6736529132617453 == 0.6735 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.6736529132617453
+E     Expected: 0.6735 ± 1.0e-04
+___________ test_published_checkpoint[Example 1/Chen/weighted[2,2]] ___________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 0.6396175728188792 == 0.6395 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 0.6396175728188792
+E     Expected: 0.6395 ± 1.0e-04
+_____________ test_published_checkpoint[Example 1/Chen/weight[1]] _____________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 1.3473058265234905 == 1.347 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 1.3473058265234905
+E     Expected: 1.347 ± 1.0e-04
+_____________ test_published_checkpoint[Example 1/Chen/weight[2]] _____________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 1.2792351456377584 == 1.279 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 1.2792351456377584
+E     Expected: 1.279 ± 1.0e-04
+_______________ test_published_checkpoint[Example 1/Chen/WS[1]] _______________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 1.3132704860806244 == 1.313 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 1.3132704860806244
+E     Expected: 1.313 ± 1.0e-04
+_________ test_published_checkpoint[Example 1/Chen/prose sigma[1,2]] __________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 1.09498743710662 == 0.6 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 1.09498743710662
+E     Expected: 0.6 ± 1.0e-04
+_______________ test_published_checkpoint[Example 1/Chen/WS[2]] _______________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 1.3132704860806244 == 1.313 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 1.3132704860806244
+E     Expected: 1.313 ± 1.0e-04
+_________ test_published_checkpoint[Example 1/Chen/prose sigma[2,2]] __________
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 1.09498743710662 == 0.6 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 1.09498743710662
+E     Expected: 0.6 ± 1.0e-04
+___ test_published_checkpoint[ER/printed-table arithmetic/five listed rows] ___
+tests\test_paper.py:19: in test_published_checkpoint
+    assert checkpoint.code == pytest.approx(checkpoint.paper,abs=checkpoint.tolerance,rel=0)
+E   assert 40.0 == 50.0 ± 1.0e-04
+E     
+E     comparison failed
+E     Obtained: 40.0
+E     Expected: 50.0 ± 1.0e-04
+=========================== short test summary info ===========================
+FAILED tests/test_case1.py::test_case1_checkpoint[eta[5]] - assert 0.34780554...
+FAILED tests/test_case1.py::test_case1_checkpoint[WSM[1]] - assert 0.83223014...
+FAILED tests/test_case1.py::test_case1_checkpoint[sigma[5,4]] - assert 0.7256...
+FAILED tests/test_case1.py::test_case1_checkpoint[WSM[5]] - assert 0.69517856...
+FAILED tests/test_example3.py::test_final_score[1] - assert 0.029630491972788...
+FAILED tests/test_paper.py::test_published_checkpoint[Example 4/full/eta[1]]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 4/full/sigma[1,1]]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 4/full/WSM[1]]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 4/full/WPM[1]]
+FAILED tests/test_paper.py::test_published_checkpoint[Case 3/full/normalized[3]]
+FAILED tests/test_paper.py::test_published_checkpoint[Case 3/full/eta[1]] - a...
+FAILED tests/test_paper.py::test_published_checkpoint[Case 3/full/eta[2]] - a...
+FAILED tests/test_paper.py::test_published_checkpoint[Case 3/full/eta[3]] - a...
+FAILED tests/test_paper.py::test_published_checkpoint[Case 3/full/Step5 eta[3]]
+FAILED tests/test_paper.py::test_published_checkpoint[Case 3/full/Output ranking]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 5/full/N(alpha1)]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 5/full/N(alpha2)]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 6/full/H(alpha3)]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 6/full/H(alpha4)]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 6/full/N(alpha3)]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 6/full/N(alpha4)]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 7/full/N(alpha5)]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 9/full/N(alpha9)]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 9/full/N(alpha10)]
+FAILED tests/test_paper.py::test_published_checkpoint[Table 4/full/pair5/M]
+FAILED tests/test_paper.py::test_published_checkpoint[Table 4/full/pair5/P]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 10/full/N(alpha11)]
+FAILED tests/test_paper.py::test_published_checkpoint[Fig. 2 / DR/full/M] - a...
+FAILED tests/test_paper.py::test_published_checkpoint[Fig. 2 / DR/full/H] - a...
+FAILED tests/test_paper.py::test_published_checkpoint[Fig. 2 / DR/full/P] - a...
+FAILED tests/test_paper.py::test_published_checkpoint[Fig. 2 / DR/full/C] - a...
+FAILED tests/test_paper.py::test_published_checkpoint[Fig. 2 / DR/full/R] - a...
+FAILED tests/test_paper.py::test_published_checkpoint[Case 1 baselines/Chen/ranking]
+FAILED tests/test_paper.py::test_published_checkpoint[Case 1 baselines/Rani reference52/ranking]
+FAILED tests/test_paper.py::test_published_checkpoint[Table 5/Rani literal/Case 2]
+FAILED tests/test_paper.py::test_published_checkpoint[Fig. 3 / RI/Rani literal/Case 2]
+FAILED tests/test_paper.py::test_published_checkpoint[Table 5/Rani literal/Example 3]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 1/Chen/weighted[1,1]]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 1/Chen/weighted[1,2]]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 1/Chen/weighted[2,1]]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 1/Chen/weighted[2,2]]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 1/Chen/weight[1]]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 1/Chen/weight[2]]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 1/Chen/WS[1]]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 1/Chen/prose sigma[1,2]]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 1/Chen/WS[2]]
+FAILED tests/test_paper.py::test_published_checkpoint[Example 1/Chen/prose sigma[2,2]]
+FAILED tests/test_paper.py::test_published_checkpoint[ER/printed-table arithmetic/five listed rows]
+48 failed, 351 passed, 8 skipped in 0.79s
